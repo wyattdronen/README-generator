@@ -1,13 +1,13 @@
 {
-  "name": "static-site",
+  "name": "readme-gen",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generate README",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Wyatt Dronen",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^6.3.1"
   }

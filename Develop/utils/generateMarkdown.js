@@ -33,11 +33,11 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license===licenseArr[0]){
-    return `Read more about ${licenseArr[0]} here:`
+    return `${licenseArr[0]} here:`
   } else if (license===licenseArr[1]){
-    return `Read more about ${licenseArr[1]} here:`
+    return `${licenseArr[1]} here:`
   } else if (license===licenseArr[2]){
-    return `Read more about ${licenseArr[2]} here:`
+    return `${licenseArr[2]} here:`
   } else {
     return ""
   }
@@ -50,26 +50,25 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [License](#license)
   * [Description](#description)
-  * [Installation](#installation)
   * [Usage](#usage)
-  * [How to Contribute](#how-to-contribute)
-  * [Tests](#tests)
-  * [Questions?](#questions)
+  * [How to Contribute](#contribution)
+  * [Acknowledgements](#acknowledge)
+  * [Status](#status)
   ## License
   ${renderLicenseSection(data.license)}
   ${renderLicenseLink(data.license)}
   ## Description
   ${data.description}
-  ## Installation
-  ${data.install}
   ## Usage
   ${data.usage}
   ## How to Contribute
   [Contributor Covenant](https://www.contributor-covenant.org/)  
-  ${data.contributing}
-  ## Tests
-  ${data.test}
-  ${data.testing}
+  ${data.contribution}
+  ## Acknowledgments
+  ${data.acknowledge}
+  ## Status
+  ${data.status}
+ 
   [${data.username}](https://github.com/${data.username})  
   ${data.email}`;
 }
