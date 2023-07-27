@@ -5,11 +5,16 @@ const licenseArray = [ "Apache license 2.0", "Artistic license 2.0", "MIT",]
 function licenseBadge(license) {
   if (license===licenseArray[0]){
     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)]"
-  } else if (license===licenseArray[1]){
+
+  } 
+  else if (license===licenseArray[1]){
     return "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)"
-  } else if (license===licenseArray[2]){
+
+  } 
+  else if (license===licenseArray[2]){
     return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-  } else {
+  } 
+  else {
     return ""
   }
 }
@@ -20,11 +25,17 @@ function licenseBadge(license) {
 function licenseLink(license) {
   if (license===licenseArray[0]){
     return `[${licenseArray[0]}](https://opensource.org/licenses/Apache-2.0)`
-  } else if (license===licenseArray[1]){
+
+  }
+   else if (license===licenseArray[1]){
     return `[${licenseArray[1]}](https://opensource.org/licenses/Artistic-2.0)`
-  } else if (license===licenseArray[2]){
+
+  } 
+  else if (license===licenseArray[2]){
     return `[${licenseArray[2]}](https://opensource.org/licenses/MIT)`
-  } else {
+
+  } 
+  else {
     return ""
   }
 }
@@ -34,11 +45,14 @@ function licenseLink(license) {
 function licenseSection(license) {
   if (license===licenseArray[0]){
     return `${licenseArray[0]} here:`
-  } else if (license===licenseArray[1]){
+  } 
+  else if (license===licenseArray[1]){
     return `${licenseArray[1]} here:`
-  } else if (license===licenseArray[2]){
+  } 
+  else if (license===licenseArray[2]){
     return `${licenseArray[2]} here:`
-  } else {
+  } 
+  else {
     return ""
   }
 }
