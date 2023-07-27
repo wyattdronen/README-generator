@@ -1,13 +1,13 @@
 
-const licenseArr = [ "Apache license 2.0", "Artistic license 2.0", "MIT",]
+const licenseArray = [ "Apache license 2.0", "Artistic license 2.0", "MIT",]
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license===licenseArr[0]){
+function licenseBadge(license) {
+  if (license===licenseArray[0]){
     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)]"
-  } else if (license===licenseArr[1]){
+  } else if (license===licenseArray[1]){
     return "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)"
-  } else if (license===licenseArr[2]){
+  } else if (license===licenseArray[2]){
     return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
   } else {
     return ""
@@ -17,13 +17,13 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license===licenseArr[0]){
-    return `[${licenseArr[0]}](https://opensource.org/licenses/Apache-2.0)`
-  } else if (license===licenseArr[1]){
-    return `[${licenseArr[1]}](https://opensource.org/licenses/Artistic-2.0)`
-  } else if (license===licenseArr[2]){
-    return `[${licenseArr[2]}](https://opensource.org/licenses/MIT)`
+function licenseLink(license) {
+  if (license===licenseArray[0]){
+    return `[${licenseArray[0]}](https://opensource.org/licenses/Apache-2.0)`
+  } else if (license===licenseArray[1]){
+    return `[${licenseArray[1]}](https://opensource.org/licenses/Artistic-2.0)`
+  } else if (license===licenseArray[2]){
+    return `[${licenseArray[2]}](https://opensource.org/licenses/MIT)`
   } else {
     return ""
   }
@@ -31,13 +31,13 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license===licenseArr[0]){
-    return `${licenseArr[0]} here:`
-  } else if (license===licenseArr[1]){
-    return `${licenseArr[1]} here:`
-  } else if (license===licenseArr[2]){
-    return `${licenseArr[2]} here:`
+function licenseSection(license) {
+  if (license===licenseArray[0]){
+    return `${licenseArray[0]} here:`
+  } else if (license===licenseArray[1]){
+    return `${licenseArray[1]} here:`
+  } else if (license===licenseArray[2]){
+    return `${licenseArray[2]} here:`
   } else {
     return ""
   }
@@ -46,7 +46,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
   ## Badges
-  ${renderLicenseBadge(data.license)}
+  ${licenseBadge(data.license)}
   ## Table of Contents
   * [License](#license)
   * [Description](#description)
@@ -55,8 +55,8 @@ function generateMarkdown(data) {
   * [Acknowledgements](#acknowledge)
   * [Status](#status)
   ## License
-  ${renderLicenseSection(data.license)}
-  ${renderLicenseLink(data.license)}
+  ${licenseSection(data.license)}
+  ${licenseLink(data.license)}
   ## Description
   ${data.description}
   ## Usage
