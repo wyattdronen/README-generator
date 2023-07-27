@@ -5,7 +5,11 @@ This application was created to generate a custom Readme using the terminal. by 
 # Link to video
 https://www.loom.com/share/433c84103d484352a52f1991f675e47d
 
-#Link to site
+# Link to site
 https://wyattdronen.github.io/README-generator/
 
+# Link to cited sources
+this repo was cited to render new licenses with markdown
+ https://github.com/elizabetholsavsky/README-Generator/blob/main/utils/generateMarkdown.js
+ 
 
